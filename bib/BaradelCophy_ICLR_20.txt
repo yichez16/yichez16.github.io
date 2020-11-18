@@ -1,0 +1,6 @@
+@InProceedings{Baradel_2020_ICLR_cophy,
+author = {Baradel, Fabien and Neverova, Natalia and Mille, Julien and Mori, Greg and Wolf, Christian},
+title = {COPHY: Counterfactual Learning of Physical Dynamics},
+booktitle = {ICLR},
+year = {2020}
+}

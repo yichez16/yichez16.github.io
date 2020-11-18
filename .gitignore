@@ -1,0 +1,10 @@
+*.idea
+.DS_Store
+*.xml
+*.dvi
+*.log
+*.gz
+*.cls
+*.lb
+.idea/*
+.idea/workspace.xml

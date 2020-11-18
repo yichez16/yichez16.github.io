@@ -1,0 +1,6 @@
+@PHDTHESIS{Baradel_2020_phd_thesis,
+author = {Baradel, Fabien},
+title = {Structured Deep Learning for Video Analysis},
+school = {Universit\'e de Lyon},
+year = {2020}
+}

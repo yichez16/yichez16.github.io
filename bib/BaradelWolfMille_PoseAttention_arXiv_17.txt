@@ -1,0 +1,7 @@
+@InProceedings{Baradel_2017a,
+author = {Baradel, Fabien and Wolf, Christian and Mille, Julien},
+title = {Pose-conditioned Spatio-Temporal Attention for Human Action Recognition},
+booktitle = {arXiv},
+month = {March},
+year = {2017}
+}

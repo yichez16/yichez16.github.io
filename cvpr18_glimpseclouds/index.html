@@ -1,0 +1,239 @@
+<html>
+<head>
+    <title>Glimpse Clouds: Human Activity Recognition from Unstructured Feature Points - INSA Lyon - CVPR'18</title>
+    <meta name="google-site-verification" content="NksNPfO4SApMtvU2rGHxr4DPan2Uy6Pz-rP9cA0k1mg"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery.mlens-1.0.min.js"></script>
+    <style>
+body
+{
+    font-family : Arial;
+	background-color : #f2f2f2;
+    font-size : 16px;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.row,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.content
+{
+    width : 800px;
+    padding : 25px 25px;
+    margin : 5px auto;
+    background-color : #fff;
+    border-radius: 20px;
+}
+.content-title {
+    width : 800px;
+    background-color : inherit;
+    margin-bottom : 0;
+    padding-bottom : 0;
+}
+
+a, a:visited
+{
+    color : blue;
+}
+
+#authors
+{
+    text-align : center;
+}
+
+#conference
+{
+    text-align : center;
+    font-style : italic;
+}
+
+#authors span
+{
+    margin : 0 10px;
+    display : inline-block;
+}
+
+h1
+{
+    text-align : center;
+    font-family : Arial;
+    font-size : 35px;
+}
+h2 {
+    font-family : Arial;
+    font-size : 30px;
+    padding : 0; margin : 10px;
+}
+h3 {
+    font-family : Arial;
+    font-size : 20px;
+    padding : 0; margin : 10px;
+}
+
+p {
+    line-height : 130%;
+    margin : 10px;
+}
+li {
+    margin : 10px 0;
+}
+
+.samples {
+    float : left;
+    width : 50%;
+    text-align : center;
+}
+.cond {
+    float : left;
+    margin : 0 40px;
+}
+.cond-container {
+    width : 700px;
+    margin : 0 auto;
+    text-align : center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+<div class="content">
+    <div class="content-title">
+        <h1>Glimpse Clouds: <br> Human Activity Recognition <br> from Unstructured Feature Points</h1>
+        <br>
+    </div>
+
+    <p id="authors">
+      <span><a href="https://fabienbaradel.github.io"><img id="image" src="../images/bio-photo.jpg"
+                                                           height="100"></img><br>Fabien Baradel</a><br>INSA Lyon</span>
+        <span><a href="http://liris.cnrs.fr/christian.wolf/"><img id="image" src="../images/cwolf.jpg"
+                                                                  height="100"></img><br>Christian Wolf</a><br>INRIA - INSA Lyon</span>
+        <span><a href="http://liris.cnrs.fr/julien.mille/"><img id="image" src="../images/jmille.jpg"
+                                                                height="100"></img><br>Julien Mille</a><br>INSA Centre Val de Loire</span>
+        <span><a href="http://www.uoguelph.ca/~gwtaylor/"><img id="image" src="../images/gtaylor.png"
+                                                               height="100"></img><br>Graham Taylor</a><br>University of Guelph - Vector Institue</span><br
+            clear="both">
+        <br>
+        <a href="https://arxiv.org/pdf/1802.07898.pdf"><img style="box-shadow: 5px 5px 2px #888888; margin: 10px"
+                                                            src="./paper-screenshot.png" width="150px"></a>
+        <br>
+        <a href="https://arxiv.org/abs/1802.07898">arXiv:1802.07898</a>
+    </p>
+
+    <br>
+
+    <center>
+        <br>
+        <a href="https://www.rsipvision.com/CVPR2018-Tuesday/14/"><strong>Interview on CVPR Daily</strong></a>
+                            /
+                            <a href="https://github.com/fabienbaradel/glimpse_clouds">Code</a>
+    </center>
+
+    <br>
+
+    <h2>Abstract</h2>
+
+    <p style="text-align: justify;">
+        We propose a method for human activity recognition from RGB data which does not rely on any pose information
+        during test time, and which does not explicitly calculate pose information internally.
+        Instead, a visual attention module learns to predict glimpse sequences in each frame.
+        These glimpses correspond to interest points in the scene which are relevant to the classified activities.
+        No spatial coherence is forced on the glimpse locations, which gives the module liberty to explore different
+        points at each frame and better optimize the process of scrutinizing visual information.
+        Tracking and sequentially integrating this kind of unstructured data is a challenge, which we address by
+        separating the set of glimpses from a set of recurrent tracking/recognition workers.
+        These workers receive the glimpses, jointly performing subsequent motion tracking and prediction of the activity
+        itself.
+        The glimpses are soft-assigned to the workers, optimizing coherence of the assignments in space, time and
+        feature space using an external memory module.
+        No hard decisions are taken, i.e. each glimpse point is assigned to all existing workers, albeit with different
+        importance.
+        Our methods outperform state-of-the-art methods on the largest human activity recognition dataset available
+        to-date; NTU RGB+D Dataset, and on a smaller human action recognition dataset Northwestern-UCLA Multiview Action
+        3D Dataset.
+    </p>
+
+
+    <center>
+        <a href="https://arxiv.org/pdf/1802.07898.pdf">
+            <strong>Download Paper</strong>
+        </a>
+    </center>
+    <br>
+</div>
+
+<hr/>
+
+<div class="content">
+    <h2>Explainer Video</h2>
+    <p>Below is a 2 minutes video briefly explaining our model and showing selected examples.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7yPDYYhaYI4" frameborder="0"
+            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
+<hr/>
+
+<hr/>
+
+<div class="content">
+    <h2>Bibtex</h2>
+
+    <pre><tt>@InProceedings{Baradel_2018_CVPR,
+        author = {Baradel, Fabien and Wolf, Christian and Mille, Julien and Taylor, Graham},
+        title = {Glimpse Clouds: Human Activity Recognition from Unstructured Feature Points},
+        booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+        month = {June},
+        year = {2018}
+        }</tt>
+    </pre>
+
+
+</div>
+
+<hr/>
+
+
+<div class="content">
+    <h2>Acknowledgements</h2>
+
+    <p>
+        This work was supported by the <a href="http://liris.cnrs.fr/deepvis/wiki/doku.php?id=start#publications">ANR/NSREC
+        DeepVision project</a>
+    </p>
+
+</div>
+
+
+</body>
+</html>
