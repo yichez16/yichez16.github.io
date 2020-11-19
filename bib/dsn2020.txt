@@ -1,0 +1,9 @@
+@INPROCEEDINGS{9153424,
+  author={J. {Wei} and Y. {Zhang} and Z. {Zhou} and Z. {Li} and M. A. {Al Faruque}},
+  booktitle={2020 50th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)}, 
+  title={Leaky DNN: Stealing Deep-Learning Model Secret with GPU Context-Switching Side-Channel}, 
+  year={2020},
+  volume={},
+  number={},
+  pages={125-137},
+  doi={10.1109/DSN48063.2020.00031}}
