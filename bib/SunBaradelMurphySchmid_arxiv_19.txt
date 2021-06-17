@@ -1,7 +1,0 @@
-@InProceedings{Sun_2019,
-author = {Sun, Chen and Baradel, Fabien and Murphy, Kevin and Schmid, Cordelia},
-title = {Contrastive Bidirectional Transformer for Temporal Representation Learning},
-booktitle = {arXiv},
-month = {June},
-year = {2019}
-}
