@@ -1,7 +1,0 @@
-@InProceedings{Baradel_2018_BMVC,
-author = {Baradel, Fabien and Wolf, Christian and Mille, Julien},
-title = {Human Activity Recognition with Pose-driven Attention to RGB},
-booktitle = {The British Machine Vision Conference (BMVC)},
-month = {September},
-year = {2018}
-}

@@ -1,7 +1,0 @@
-@InProceedings{Baradel_USPatent_2017,
-author = {Baradel, Fabien and Csurka, Gabriela and Chidlovskii, Boris},
-title = {Conditional adaptation network for image classification},
-booktitle = {US Patent App. 15/450,620},
-month = {Sept},
-year = {2018}
-}

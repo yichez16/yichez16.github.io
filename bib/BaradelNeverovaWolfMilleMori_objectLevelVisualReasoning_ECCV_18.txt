@@ -1,7 +1,0 @@
-@InProceedings{Baradel_2018_ECCV,
-author = {Baradel, Fabien and Neverova, Natalia and Wolf, Christian and Mille, Julien and Mori, Greg},
-title = {Object Level Visual Reasoning in Videos},
-booktitle = {ECCV},
-month = {June},
-year = {2018}
-}
