@@ -1,680 +1,301 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
-    <meta name=viewport content="width=device-width, initial-scale=1">
-    <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-    <style type="text/css">
-    /* Color scheme stolen from Sergey Karayev */
-    a {
-    color: #1772d0;
-    text-decoration:none;
-    }
-    a:focus, a:hover {
-    color: #f09228;
-    text-decoration:none;
-    }
-    body,td,th,tr,p,a {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 14px
-    }
-    strong {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 14px;
-    }
-    heading {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 22px;
-    }
-    papertitle {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: 700
-    }
-    name {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 32px;
-    }
-    .one
-    {
-    width: 160px;
-    height: 160px;
-    position: relative;
-    }
-    .two
-    {
-    width: 160px;
-    height: 160px;
-    position: absolute;
-    transition: opacity .2s ease-in-out;
-    -moz-transition: opacity .2s ease-in-out;
-    -webkit-transition: opacity .2s ease-in-out;
-    }
-    .fade {
-     transition: opacity .2s ease-in-out;
-     -moz-transition: opacity .2s ease-in-out;
-     -webkit-transition: opacity .2s ease-in-out;
-    }
-    span.highlight {
-        background-color: #ffffd0;
-    }
-    .new {
-    background-color : #cc0000; color:white; border-radius : 5px; padding :1px; font-size : 14px; margin : 0 5px;}
 
+<!DOCTYPE HTML>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-
-
-
-
-
-
-    </style>
-    <link rel="icon" type="image/png" href="seal_icon.png">
-    <title>Yicheng Zhang</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet'
-          type='text/css'>
-
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-86789415-1', 'auto');
-  ga('send', 'pageview');
-
-
-
-
-
-
-
-
-
-    </script>
-</head>
-<body>
-<table width="840" border="0" align="center" cellspacing="0" cellpadding="0">
-    <tr>
-        <td>
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                <tr>
-                    <td width="67%" valign="middle">
-                        <p align="center">
-                            <name>Yicheng(亦成) Zhang</name>
-                        </p>
-
-
-
-                        <p>
-                            I am a P.h.D student at the <a href="https://www.ece.ucr.edu/">Department of Electrical & Computer Engineering</a> at <a href="https://www.ucr.edu/">UC Riverside</a>, where I am fortunately advised by Prof. <a href="https://www.cs.ucr.edu/~nael/">Nael Abu-Ghazaleh</a>. My interest lies in <strong>Architecture Support For Security</strong>, <strong>GPU Security</strong> and <strong>Machine Learning Security</strong>. 
-                            I received my M.Sc. in Computer Engineering from <a href="https://uci.edu/">UC Irvine</a>, and my B.S. in Electrical Engineering and Automation from <a href="https://en.wikipedia.org/wiki/Sichuan_University">Sichuan University</a>.
-                        <p>
-
-
-                        <p style="text-align:center">
-                            <a href="yichez16<at>uci<dot>edu">Email</a> &nbsp/&nbsp
-                            <a href="./docs/resume/Yicheng_CV.pdf">CV</a> &nbsp/&nbsp
-                            <a href="https://scholar.google.com/citations?user=X3LwPLAAAAAJ&hl=en">Scholar</a> &nbsp/&nbsp
-                            <!-- <a href="https://github.com/fabienbaradel">Github</a> &nbsp/&nbsp -->
-                            <a href="https://www.linkedin.com/in/yichez16/"> LinkedIn </a> 
-                            <!-- &nbsp/&nbsp -->
-                            <!-- <a href="https://twitter.com/fabienbaradel">Twitter</a> -->
-                        </p>
-                    </td>
-                    <td width="50%">
-                        <img src="./images/yicheng.jpg">
-                    </td>
-                </tr>
-            </table>
-
-
-            <table width="100%" cellpadding="5"><tbody>
-                <tr>
-                  <td style="width: 30px; padding-left: 20px; padding-bottom: 20px;">
-                    <img width="30px" src="./icons/university.svg">
-                  </td>
-                  <td style="padding-bottom: 20px;"><heading>Education</heading></td>
-                </tr>
-              </tbody></table>
-      
-              <table width="100%" ><tbody>
-                <tr>
-                  <td style="width: 70%; text-align: left; padding-left: 20px;">
-                    <strong>Ph.D. in Electrical Engineering</strong>
-                  </td>
-                  <td style="width: 30%; text-align: right;">
-                    2021-2025
-                  </td>
-                </tr>
-                <tr>
-                  <td style="width: 80%; text-align: left; padding-left: 20px;">
-                    <a href="https://www.ucr.edu/"><strong>University of California, Riverside</strong></a> | Riverside, California
-                  </td>
-                </tr>
-                <tr>
-                  <td style="width: 70%; text-align: left; padding-left: 20px;">
-                    <strong>M.Sc. in Computer Engineering</strong>
-                  </td>
-                  <td style="width: 30%; text-align: right;">
-                    2018-2021
-                  </td>
-                </tr>
-                <tr>
-                  <td style="width: 80%; text-align: left; padding-left: 20px;">
-                    <a href="https://uci.edu/"><strong>University of California, Irvine</strong></a> | Irvine, California
-                  </td>
-                </tr>
-                <tr>
-                    <td style="width: 70%; text-align: left; padding-left: 20px;">
-                      <strong>B.S. in Electrical Engineering and Automation</strong>
-                    </td>
-                    <td style="width: 30%; text-align: right;">
-                      2014-2018
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="width: 80%; text-align: left; padding-left: 20px;">
-                      <a href="https://en.wikipedia.org/wiki/Sichuan_University"><strong>Sichuan University</strong></a> | Chengdu, Sichuan
-                    </td>
-                  </tr>
-              </tbody></table>
-            
-
-
-
-
-              
-
-
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                <td>
-                    <heading>Publications</heading>
-                </td>
-
-
-                <tbody>
-
-
-
-
-
-
-                    <tr>
-                        <td width="25%"><img src="images/attackmodel-tifs.jpg" alt="blind-date"
-                                             width="200"
-                                             ></td>
-                        <td width="75%" valign="top">
-    
-                            <p>
-                                <a href="https://dl.acm.org/doi/10.1145/3431920.3439468">
-                                    <papertitle>Stealing Neural Network Structure through Remote FPGA Side-channel Analysis
-                                    </papertitle>
-                                </a>
-                                <br>
-                                <strong>Yicheng Zhang</strong>,
-                                <a href="https://sites.uci.edu/rozhinyasaei/">Rozhin Yasaei</a>,
-                                Hao Chen,
-                                <a href="https://faculty.sites.uci.edu/zhouli/">Zhou Li</a>,
-                                <a href="https://engineering.uci.edu/users/mohammad-al-faruque">Mohammad Abdullah Al Faruque</a>
-            
-                                <br>
-                                Accepted in IEEE Transactions on Information Forensics and Security (TIFS).
-                                <br>
-                                <a href="./papers/FPGA_ML_TIFS.pdf">PDF</a>
-                                /
-                                <a href="https://dl.acm.org/doi/10.1145/3431920.3439468">Poster</a>
-                           
-                                 
-                                <p>
-                                We explore whether the structural secret (layers and hyper-parameters) of a victim DNN model can be inferred by a remote attacker who shares the same FPGA board. 
-                                We show by implementing on-chip RO-based power monitors, the power consumption of the victim DNN can be sampled at high resolution, which guarantees all layers and hyper-parameters can be reconstructed at high accuracy.
-                                </p>
-                                
-                                
-                           
-                            </p>                          
-                        </td>
-                    </tr> 
-
-
-
-
-
-
-                    <tr>
-                        <td width="25%"><img src="images/dsn20ThreatModel.png" alt="blind-date"
-                                             width="200"
-                                             ></td>
-                        <td width="75%" valign="top">
-    
-                            <p>
-                                <a href="https://ieeexplore.ieee.org/document/9153424">
-                                    <papertitle>Leaky DNN: Stealing Deep-Learning Model Secret with GPU Context-Switching Side-Channel
-                                    </papertitle>
-                                </a>
-                                <br>
-                                Junyi Wei*,
-                                <strong>Yicheng Zhang*</strong>,
-                                <a href="http://homepage.fudan.edu.cn/zz113/author/37175/">Zhe Zhou</a>,
-                                <a href="https://faculty.sites.uci.edu/zhouli/">Zhou Li</a>,
-                                <a href="https://engineering.uci.edu/users/mohammad-al-faruque">Mohammad Abdullah Al Faruque</a>
-                                <br>
-                                <strong>*Junyi Wei and Yicheng Zhang are both first author.</strong>
-                                <br>
-                                Accepted in Proceedings of the 50th IEEE/IFIP International Conference on Dependable Systems and Networks (DSN), Valencia, Spain, June, 2020.
-                                <br>
-                                (48/291=16.5% acceptance rate)&nbsp; 
-                                <br>
-                                <a href="./papers/dsn2020.pdf">PDF</a>
-                                /
-                                <a href="https://www.youtube.com/watch?v=M_F7khOLZ7A">Video</a>
-                                /
-                                <a href="./bib/dsn2020.txt">bibtex</a>
-                            </p>
-                            <p> We exploit the GPU side-channel based on context-switching penalties. 
-                                This side-channel allows us to extract the fine-grained structural secret of a DNN model, including its layer composition and hyper-parameters. 
-                                Leveraging this side-channel, we developed an attack prototype named MosConS, which applies LSTM-based inference models to identify the structural secret. 
-                            </p>
-                        </td>
-                    </tr>    
-
-
-
-                    <!-- <tr>
-                        <td width="25%"><img src="images/attackmodel-ccs.jpg" alt="blind-date"
-                                             width="200"
-                                             ></td>
-                        <td width="75%" valign="top">
-    
-                            <p>
-                                
-                                    <papertitle>BayesMem: An End-to-End Bayesian Memory-Deduplication based Rowhammer Attack on Industrial Control Systems
-                                    </papertitle>
-                                </a>
-                                <br>
-                                <a href="https://scholar.google.com/citations?user=vXebqG8AAAAJ&hl=en">Anomadarshi Barua</a>,
-                                <strong>Yicheng Zhang</strong>,
-                                <a href="https://engineering.uci.edu/users/mohammad-al-faruque">Mohammad Abdullah Al Faruque</a>
-            
-                                <br>
-                                <em>Under review in CCS 2021&nbsp; 
-                                <br>
-                                <a href="./papers/rowhammer-ccs.pdf">PDF</a>   
-                                /
-                                <a href="https://sites.google.com/view/bayesmem/home">Video</a>
-
-                                <p>
-                                We show a new attack primitive-BayesMem using the Bayesian estimation-based memory deduplication and the Rowhammer attack in cloud settings that works without the presence of a software bug in any layer of Industrial Control Systems (ICSs). The BayesMem deploys a malicious co-located Virtual Private Server (VPS) in clouds near the victim VPS and injects false commands into the target ICS. 
-                                Moreover, We show that the BayesMem is capable of
-                                adversarial control over the target ICS that may result in severe
-                                consequences, such as an unplanned shutdown of the target ICS.
-                                
-                                </p>
-                                
-                                
-                           
-                            </p>                          
-                        </td>
-                    </tr>  -->
-
-                </tbody>
-
+  <title>Licheng Zong's Home</title>
   
-
-
-                <tbody>
-            </table>
-
-
-
-
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                <tr>
-                    <td>
-                        <heading>Teaching</heading>
-                    </td>
-                </tr>
-            </table>
-            <table width="100%" align="center" border="0" cellpadding="20">
-                <tr>
-                    <td width="25%"><img src="./images/teaching.png" alt="teaching" width="200" ></td>
-                    <td width="75%" valign="center">
-                        <p>
-                            <a href="http://plaza.eng.uci.edu/course/eecs/150/outline/2017-2018">
-                                <papertitle>Continuous-Time Signals and Systems</papertitle>
-                            </a>
-                            <br>
-                            <em>TA for EECS150 - Winter 2020</em>
-                            <!-- <br>
-                            <a href="https://github.com/fabienbaradel/intro_ml">Github repo</a>
-                            / Slides:
-                            <a href="./docs/teaching/intro_ml/cours_1.pdf">1</a>
-                            -
-                            <a href="./docs/teaching/intro_ml/cours_2.pdf">2</a>
-                            / Exercises:
-                            <a href="./docs/teaching/intro_ml/tp_1.pdf">1</a>
-                            -
-                            <a href="./docs/teaching/intro_ml/tp_2.pdf">2</a> -->
-                        </p>
-                        <p>
-                        <a href="http://plaza.eng.uci.edu/course/eecs/111/outline/2016-2017">    
-                            <papertitle>Sytem Software</papertitle>
-                        </a>    
-                            <br>
-                            <em>TA for EECS111 - Spring 2020</em>
-                        </p>
-                        <p>
-                            <a href="http://plaza.eng.uci.edu/course/eecs/40/outline/2012-2013">
-                                <papertitle>Object Oriented System Programming</papertitle>
-                            </a>
-                            
-                            
-                            <br>
-                            <em>TA for EECS40 - Fall 2020</em>
-                        </p>
-                        <p>
-                            <a href="http://catalogue.uci.edu/allcourses/compsci/">
-                                <papertitle>Next Generation Search Systems</papertitle>
-                            </a>
-                            
-                            
-                            <br>
-                            <em>TA for CS125 - Winter 2021</em>
-                        </p>
-                        <p>
-                            <a href="http://plaza.eng.uci.edu/course/eecs/112/outline/2012-2013">    
-                                <papertitle>Organization of Digital Computers</papertitle>
-                            </a>    
-                                <br>
-                                <em>TA for EECS112 - Spring 2021</em>
-                            </p>
-                        <!-- <p>
-                            <a href="./">
-                                <papertitle>Mathematics</papertitle>
-                            </a>
-                            <br>
-                            <em>EPITA - 1st year - 24h (CM+TD) - September 2017</em>
-                        </p>
-                        <p>
-                            <a href="./images/tensorflow_ensai_SID_13_01_17.pdf">
-                                <papertitle>Introduction to Deep Learning with Tensorflow</papertitle>
-                            </a>
-                            <br>
-                            <em>ENSAI - MSc Data Science - 6h - January 2017</em>
-                            <br>
-                            <a href="https://github.com/fabienbaradel/Tensorflow-tutorials/">Github repo</a>
-                            /
-                            <a href="./docs/tensorflow_ensai_SID_13_01_17.pdf">slides</a>
-                        </p> -->
-
-                    </td>
-                </tr>
-                
-
-
-            </table>
-            <!-- ######## About me #########-->
-
-
-
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                <tr>
-                    <td>
-                        <heading>About me</heading>
-                    </td>
-                </tr>
-            </table>
-            <table width="100%" align="center" border="0" cellpadding="20">
-                <tr>
-                    <td width="25%"><img src="./images/cycle.png" alt="teaching" width="200" ></td>
-                    <td width="75%" valign="center">
-                        <p>
-                            In my free time, I love to ride road bikes. In the summer of 2018, I cycled around <a href="https://baike.baidu.com/item/%E5%8F%B0%E6%B9%BE/122340">Taiwan Province</a> with my friends. 
-                            I was a member of <a href="https://www.facebook.com/Cycling-Club-at-UCI-385295758245391/">University of California Irvine Cycling Club</a> and was the leader of Sichuan University Cycling Club.
-                        </p> 
-                        <p>  
-                            Also, I like to capture the beautiful moments of our life stories with my wife, Jinrun. 
-                        </p>
-                        <p> 
-                            Subscribe <a href="https://space.bilibili.com/7636646">our channel</a> and watch our Vlog! (๑•̀ㅂ•́)و✧ 
-                        </p>
-                        <!-- <p>
-                        <a href="http://plaza.eng.uci.edu/course/eecs/111/outline/2016-2017">    
-                            <papertitle>Sytem Software</papertitle>
-                        </a>    
-                            <br>
-                            <em>EECS111 - Spring 2020</em>
-                        </p>
-                        <p>
-                            <a href="http://plaza.eng.uci.edu/course/eecs/40/outline/2012-2013">
-                                <papertitle>Object Oriented System Programming</papertitle>
-                            </a>
-                            
-                            
-                            <br>
-                            <em>EECS40 - Fall 2020</em>
-                        </p>
-                        <p>
-                            <a href="./">
-                                <papertitle>Mathematics</papertitle>
-                            </a>
-                            <br>
-                            <em>EPITA - 1st year - 24h (CM+TD) - September 2017</em>
-                        </p>
-                        <p>
-                            <a href="./images/tensorflow_ensai_SID_13_01_17.pdf">
-                                <papertitle>Introduction to Deep Learning with Tensorflow</papertitle>
-                            </a>
-                            <br>
-                            <em>ENSAI - MSc Data Science - 6h - January 2017</em>
-                            <br>
-                            <a href="https://github.com/fabienbaradel/Tensorflow-tutorials/">Github repo</a>
-                            /
-                            <a href="./docs/tensorflow_ensai_SID_13_01_17.pdf">slides</a>
-                        </p> -->
-
-                    </td>
-                </tr>
-
-            </table>
-
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                <tr>
-                    <td>
-                        <heading><a href="https://yichez16.github.io/blog/">A road to be a good researcher in computer architecture.</a>
-                        </heading>
-                    </td>
-                </tr>
-            </table>
-            <table width="100%" align="center" border="0" cellpadding="20">
-
-            
-            <!-- ######## THANKS #########-->
-
-
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                <tr>
-                    <td>
-                        <br>
-                        <p align="right">
-                            <font size="2">
-                                <a href="https://jonbarron.info">Awesome webpage from Jon Barron.</a>
-                            </font>
-                        </p>
-                    </td>
-                </tr>
-            </table>
-            <script type="text/javascript">
-      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-          document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </script>
-            <script type="text/javascript">
-      try {
-          var pageTracker = _gat._getTracker("UA-7580334-1");
-          pageTracker._trackPageview();
-          } catch(err) {}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </script>
-        </td>
+  <meta name="author" content="Licheng Zong">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="icon" type="image/png" href="images/seal_icon.png">
+</head>
+
+<body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+              <p style="text-align:center">
+                <name>Licheng Zong（宗理成）</name>
+              </p>
+              <p>I am a first-year PhD student in the Department of Computer Science and Engineering at 
+                <a href="https://www.cuhk.edu.hk/">The Chinese University of Hong Kong</a> (<strong>CUHK-CSE</strong>), advised by Prof.
+                <a href="https://liyu95.com/">Yu Li</a>.
+              </p>
+                I received my B.E. in Automation Science and Technology at <a href="http://www.xjtu.edu.cn/">Xi'an Jiaotong University</a> in July 2021.
+              <p>
+              </p>
+              <p>
+                My research interests include <strong>AI in Healthcare, Bioinfomatics, Natural Language Processing, 
+                Deep Learning, Machine learning and DNN Acceleration</strong>.
+              </p>
+              <p style="text-align:center">
+                <a href="mailto:zolich729@gmail.com">Email</a> &nbsp/&nbsp
+                <a href="ttps://scholar.google.com/citations?hl=zh-CN&user=OWVr9tsAAAAJ">Google Scholar</a> &nbsp/&nbsp
+                <a href="data/LichengZong-CV.pdf">CV</a> &nbsp/&nbsp
+                <a href="https://www.linkedin.com/in/lichengzong/">LinkedIn</a> &nbsp/&nbsp
+                <a href="https://github.com/lczong">GitHub</a>
+              </p>
+            </td>
+            <td style="padding:2.5%;width:30%;max-width:40%">
+              <a href="images/LichengZong_ok.jpg"><img style="width:100%;max-width:100%" width="160" alt="profile photo" src="images/LichengZong_ok.jpg" class="hoverZoomLink"></a>
+            </td>
+          </tr>
+        </tbody></table>
+
+        <table width="100%" cellpadding="5"><tbody>
+          <tr>
+            <td style="width: 30px; padding-left: 20px; padding-bottom: 20px;">
+              <img width="30px" src="./icons/university.svg">
+            </td>
+            <td style="padding-bottom: 20px;"><heading>Education</heading></td>
+          </tr>
+        </tbody></table>
+
+        <table width="100%" ><tbody>
+          <tr>
+            <td style="width: 70%; text-align: left; padding-left: 20px;">
+              <strong>Ph.D. in Computer Science and Engineering</strong>
+            </td>
+            <td style="width: 30%; text-align: right;">
+              2021-2025
+            </td>
+          </tr>
+          <tr>
+            <td style="width: 80%; text-align: left; padding-left: 20px;">
+              <a href="https://www.cuhk.edu.hk/"><strong>Chinese University of Hong Kong</strong></a> | Hong Kong SAR
+            </td>
+          </tr>
+          <tr>
+            <td style="width: 70%; text-align: left; padding-left: 20px;">
+              <strong>B.E. in Automation Science and Technology</strong>
+            </td>
+            <td style="width: 30%; text-align: right;">
+              2017-2021
+            </td>
+          </tr>
+          <tr>
+            <td style="width: 80%; text-align: left; padding-left: 20px;">
+              <a href="http://www.xjtu.edu.cn/"><strong>Xi'an Jiaotong University</strong></a> | Xi'an, Shaanxi
+            </td>
+          </tr>
+        </tbody></table>
+
+        <table width="100%" cellpadding="5"><tbody>
+          <tr>
+            <td style="width: 30px; padding-left: 20px; padding-top: 30px; padding-bottom: 20px; ">
+              <img width="30px" src="./icons/experience.svg">
+            </td>
+            <td style="padding-top: 30px; padding-bottom: 20px;">
+              <heading>Experience</heading>
+            </td>
+          </tr>
+        </tbody></table>
+
+        <table width="100%" cellpadding="5"><tbody>
+          <tr>
+            <td style="width: 70%; text-align: left; padding-left: 20px;">
+              <strong>Research Intern</strong> | 
+              <a href="https://www.smartmore.com/">SmartMore Corporation</a> | 
+              Shenzhen, Guangdong
+            </td>
+            <td style="width: 30%; text-align: right;">
+              Jul 2020 - May 2021
+            </td>
+          </tr>
+          <tr>
+            <td style="width: 70%; text-align: left; padding-left: 20px;">
+              <strong>Research Assistant</strong> | 
+              <a href="https://www.brown.edu/">Brown University</a> | 
+              Providence, Rhode Island
+            </td>
+            <td style="width: 30%; text-align: right;">
+              Mar 2020 - Mar 2021
+            </td>
+          </tr>
+          <tr>
+            <td style="width: 70%; text-align: left; padding-left: 20px;">
+              <strong>Research Assistant</strong> | 
+              <a href="http://www.xjtu.edu.cn/">Xi'an Jiaotong University</a> | 
+              Xi'an, Shaanxi
+            </td>
+            <td style="width: 30%; text-align: right;">
+              Sep 2019 - Jun 2020
+            </td>
+          </tr>
+          <tr>
+            <td style="width: 70%; text-align: left; padding-left: 20px;">
+              <strong>Research Assistant</strong> | 
+              <a href="http://www.ia.cas.cn/">Institute of Automation, CAS</a> | 
+              Beijing
+            </td>
+            <td style="width: 30%; text-align: right;">
+              Aug 2019 - Feb 2020
+            </td>
+          </tr>
+          <tr>
+            <td style="width: 70%; text-align: left; padding-left: 20px;">
+              <strong>Research Assistant</strong> | 
+              <a href="https://www.nus.edu.sg/">National University of Singapore</a> | 
+              Singapore
+            </td>
+            <td style="width: 30%; text-align: right;">
+              Jul 2019 - Aug 2019
+            </td>
+          </tr>
+        </tbody></table>
+
+        <table style="width:100%;" cellpadding="5"><tbody>
+          <tr>
+            <td style="width: 30px; padding-left: 20px; padding-top: 30px; padding-bottom: 20px; ">
+              <img width="30px" src="./icons/publication.svg">
+            </td>
+            <td style="padding-top: 30px; padding-bottom: 20px;">
+              <heading>Publications</heading>
+            </td>
+          </tr>
+        </tbody></table>
+      
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td style="padding:20px;width:160px;vertical-align:middle">
+              <img src="images/wei2021proteinrna.jpg" alt="Protein-RNA interaction prediction with deep learning: Structure matters" width="160" style="border-style: none">
+            </td>
+            <td width="75%" valign="middle">
+              <a href="https://arxiv.org/abs/2107.12243">
+                <papertitle>Protein-RNA interaction prediction with deep learning: Structure matters</papertitle>
+              </a>
+              <br>
+              <a href="https://dblp.org/pid/247/5290.html">Junkang Wei*</a>,
+              <a href="https://dblp.org/pid/247/5290.html">Siyuan Chen*</a>,
+              <strong>Licheng Zong*</strong>,
+              <a href="https://sfb.kaust.edu.sa/Pages/Gao.aspx">Xin Gao<sup>#</sup></a>,
+              <a href="https://liyu95.com/">Yu Li<sup>#</sup></a>
+              <br/>
+              <em>ArXiv</em>, 2021
+              <br>
+              <a href="wei2021proteinrna.bib">bibtex</a>
+              <p>We give a thorough review of Protein-RNA interactions, surveying both the binding site and binding preference prediction problems and covering the commonly used datasets, features, and models.
+                We also point out the potential challenges and opportunities in this field. 
+                This survey summarizes the development of the RBP-RNA interaction field in the past and foresees its future development in the post-AlphaFold era.</p>
+            </td>
+          </tr>
+        </tbody></table>
+
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr>
+          <td style="padding:20px;width:160px;vertical-align:middle">
+            <img src="images/CCC20.jpg" alt="Model Adaption Object Detection System for Robot" width="160" style="border-style: none">
+          </td>
+          <td width="75%" valign="middle">
+            <a href="https://ieeexplore.ieee.org/document/9189674">
+              <papertitle>Model Adaption Object Detection System for Robot</papertitle>
+            </a>
+            <br>
+            <a href="https://dblp.org/pid/247/5290.html">Jingwen Fu</a>,
+            <strong>Licheng Zong</strong>,
+            Yinbing Li, Ke Li, Bingqian Yang, Xibei Liu
+            <br/>
+            <em>39th Chinese Control Conference (CCC)</em>, 2020
+            <br>
+            <a href="data/CCC20.bib">bibtex</a>
+            <p>We propose a new vision system for robots, the model adaptation object detection system. 
+              Instead of using a single one to solve problems, 
+              we made use of different object detection neural networks to guide the robot in accordance with various situations, 
+              with the help of a meta neural network to allocate the object detection neural networks.</p>
+          </td>
+        </tr>
+      </tbody></table>
+
+      <table style="width:100%;" cellpadding="5"><tbody>
+        <tr>
+          <td style="width: 30px; padding-left: 20px; padding-top: 30px; padding-bottom: 20px; ">
+            <img width="30px" src="./icons/honor.svg">
+          </td>
+          <td style="padding-top: 30px; padding-bottom: 20px;">
+            <heading>Honors and Awards</heading>
+          </td>
+        </tr>
+      </tbody></table>
+
+      <table width="100%" cellpadding="5"><tbody>
+        <tr>
+          <td style="width: 70%; text-align: left; padding-left: 20px;">
+            <strong> Execellent Graduate </strong> | Xi'an Jiaotong University
+          </td>
+          <td style="width: 30%; text-align: right;">
+            2021
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 70%; text-align: left; padding-left: 20px;">
+            <strong> Execellent Student </strong> | Xi'an Jiaotong University
+          </td>
+          <td style="width: 30%; text-align: right;">
+            2020
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 70%; text-align: left; padding-left: 20px;">
+            <strong> First Prize </strong> | National College Robot Competition (ROBOCON)
+          </td>
+          <td style="width: 30%; text-align: right;">
+            2019
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 70%; text-align: left; padding-left: 20px;">
+            <strong> Meritorious Winner </strong> | Interdisciplinary Contest In Modeling
+          </td>
+          <td style="width: 30%; text-align: right;">
+            2019
+          </td>
+        </tr>
+      </tbody></table>
+
+      <table style="width:100%;" cellpadding="5"><tbody>
+        <tr>
+          <td style="width: 30px; padding-left: 20px; padding-top: 30px; padding-bottom: 20px; ">
+            <img width="30px" src="./icons/news.svg">
+          </td>
+          <td style="padding-top: 30px; padding-bottom: 20px;">
+            <heading>Recent News</heading>
+          </td>
+        </tr>
+      </tbody></table>
+
+      <table width="100%" cellpadding="5"><tbody>
+        <tr>
+          <td style="width: 70%; text-align: left; padding-left: 20px;">
+            <p>--- July 2021, put our RBP Review on ArXiv.</p>
+            <p>--- July 2021, graduated from Xi'an Jiaotong University!</p>
+            <p>--- May 2021, decided to pursue a Ph.D. in Computer Science and Engineering at CUHK!</p>
+            <p>--- Mar 2021, won the Execellent Graduate of Xi'an Jiaotong University.</p>
+          </td>
+        </tr>
+      </tbody></table>
+
+        <table width="100%" cellpadding="20"><tbody>
+          <tr>
+            <br>
+            <p style="padding-left: 20px;"><hr></p>
+            <p style="padding-left: 20px;">
+              Updated July 2021</p>
+            <p style="padding-left: 20px;">
+              <a href='https://clustrmaps.com/site/1bhp2'  title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=ffffff&w=300&t=n&d=1tL6HRyoDOHL2MkuB5yE2eo23A_CTq03icIw-dlOYEA&co=2d78ad&ct=ffffff'/></a>
+            </p>
+            <p style="text-align: right;">
+              <a href="https://jonbarron.info/">Template From Here</a>
+            </p>
+          </tr>
+        </tbody></table>
+
+      </td>
     </tr>
-</table>
+  </table>
 </body>
+
 </html>
-
-
-
