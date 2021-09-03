@@ -1,9 +1,9 @@
 @ARTICLE{9517289,
   author={Zhang, Yicheng and Yasaei, Rozhin and Chen, Hao and Li, Zhou and Faruque, Mohammad Abdullah Al},
   journal={IEEE Transactions on Information Forensics and Security}, 
-  title={Stealing Neural Network Structure through Remote FPGA Side-channel Analysis}, 
+  title={Stealing Neural Network Structure Through Remote FPGA Side-Channel Analysis}, 
   year={2021},
-  volume={},
+  volume={16},
   number={},
-  pages={1-1},
+  pages={4377-4388},
   doi={10.1109/TIFS.2021.3106169}}
