@@ -1,0 +1,6 @@
+@inproceedings{Slocum2023going,
+  title={Going through the motions: AR/VR keylogging from user head motions},
+  author={Slocum, Carter and Zhang, Yicheng and Chen, Jiasi and Abu-Ghazaleh, Nael},
+  booktitle={USENIX Security Symposium},
+  year={2023}
+}
