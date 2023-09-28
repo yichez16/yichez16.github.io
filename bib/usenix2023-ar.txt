@@ -1,17 +1,12 @@
-@inproceedings{DBLP:conf/uss/ZhangSCA23,
-  author       = {Yicheng Zhang and
-                  Carter Slocum and
-                  Jiasi Chen and
-                  Nael B. Abu{-}Ghazaleh},
-  editor       = {Joseph A. Calandrino and
-                  Carmela Troncoso},
-  title        = {It's all in your head(set): Side-channel attacks on {AR/VR} systems},
-  booktitle    = {32nd {USENIX} Security Symposium, {USENIX} Security 2023, Anaheim,
-                  CA, USA, August 9-11, 2023},
-  publisher    = {{USENIX} Association},
-  year         = {2023},
-  url          = {https://www.usenix.org/conference/usenixsecurity23/presentation/zhang-yicheng},
-  timestamp    = {Thu, 10 Aug 2023 14:57:12 +0200},
-  biburl       = {https://dblp.org/rec/conf/uss/ZhangSCA23.bib},
-  bibsource    = {dblp computer science bibliography, https://dblp.org}
+@inproceedings {zhang2023its,
+author = {Yicheng Zhang and Carter Slocum and Jiasi Chen and Nael Abu-Ghazaleh},
+title = {It{\textquoteright}s all in your head(set): Side-channel attacks on {AR/VR} systems},
+booktitle = {32nd USENIX Security Symposium (USENIX Security 23)},
+year = {2023},
+isbn = {978-1-939133-37-3},
+address = {Anaheim, CA},
+pages = {3979--3996},
+url = {https://www.usenix.org/conference/usenixsecurity23/presentation/zhang-yicheng},
+publisher = {USENIX Association},
+month = aug
 }
