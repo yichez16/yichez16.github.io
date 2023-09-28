@@ -1,17 +1,22 @@
-@inproceedings{10.1145/3431920.3439468,
-author = {Zhang, Yicheng and Yasaei, Rozhin and Chen, Hao and Li, Zhou and Al Faruque, Mohammad Abdullah},
-title = {Stealing Neural Network Structure through Remote FPGA Side-Channel Analysis},
-year = {2021},
-isbn = {9781450382182},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3431920.3439468},
-doi = {10.1145/3431920.3439468},
-abstract = {Deep Neural Network (DNN) models have been extensively developed by companies for a wide range of applications. The development of a customized DNN model with great performance requires costly investments, and its structure (layers and hyper-parameters) is considered intellectual property and holds immense value. However, in this paper, we found the model secret is vulnerable when a cloud-based FPGA accelerator executes it. We demonstrate an end-to-end attack based on remote power side-channel analysis and machine-learning-based secret inference against different DNN models. The evaluation result shows that an attacker can reconstruct the layer and hyper-parameter sequence at over 90% accuracy using our method, which can significantly reduce her model development workload. We believe the threat presented by our attack is tangible, and new defense mechanisms should be developed against this threat.},
-booktitle = {The 2021 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays},
-pages = {225},
-numpages = {1},
-keywords = {deep-learning model, side-channel attack, FPGA},
-location = {Virtual Event, USA},
-series = {FPGA '21}
+@inproceedings{DBLP:conf/fpga/ZhangYC0F21,
+  author       = {Yicheng Zhang and
+                  Rozhin Yasaei and
+                  Hao Chen and
+                  Zhou Li and
+                  Mohammad Abdullah Al Faruque},
+  editor       = {Lesley Shannon and
+                  Michael Adler},
+  title        = {Stealing Neural Network Structure through Remote {FPGA} Side-channel
+                  Analysis},
+  booktitle    = {{FPGA} '21: The 2021 {ACM/SIGDA} International Symposium on Field
+                  Programmable Gate Arrays, Virtual Event, USA, February 28 - March
+                  2, 2021},
+  pages        = {225},
+  publisher    = {{ACM}},
+  year         = {2021},
+  url          = {https://doi.org/10.1145/3431920.3439468},
+  doi          = {10.1145/3431920.3439468},
+  timestamp    = {Thu, 14 Oct 2021 10:41:31 +0200},
+  biburl       = {https://dblp.org/rec/conf/fpga/ZhangYC0F21.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
 }

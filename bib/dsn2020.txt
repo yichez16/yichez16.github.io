@@ -1,8 +1,19 @@
-@inproceedings{wei2020leaky,
-  title={Leaky dnn: Stealing deep-learning model secret with gpu context-switching side-channel},
-  author={Wei, Junyi and Zhang, Yicheng and Zhou, Zhe and Li, Zhou and Al Faruque, Mohammad Abdullah},
-  booktitle={2020 50th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)},
-  pages={125--137},
-  year={2020},
-  organization={IEEE}
+@inproceedings{DBLP:conf/dsn/WeiZZLF20,
+  author       = {Junyi Wei and
+                  Yicheng Zhang and
+                  Zhe Zhou and
+                  Zhou Li and
+                  Mohammad Abdullah Al Faruque},
+  title        = {Leaky {DNN:} Stealing Deep-Learning Model Secret with {GPU} Context-Switching
+                  Side-Channel},
+  booktitle    = {50th Annual {IEEE/IFIP} International Conference on Dependable Systems
+                  and Networks, {DSN} 2020, Valencia, Spain, June 29 - July 2, 2020},
+  pages        = {125--137},
+  publisher    = {{IEEE}},
+  year         = {2020},
+  url          = {https://doi.org/10.1109/DSN48063.2020.00031},
+  doi          = {10.1109/DSN48063.2020.00031},
+  timestamp    = {Thu, 14 Oct 2021 10:18:11 +0200},
+  biburl       = {https://dblp.org/rec/conf/dsn/WeiZZLF20.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
 }

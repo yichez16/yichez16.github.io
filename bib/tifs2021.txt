@@ -1,9 +1,18 @@
-@ARTICLE{9517289,
-  author={Zhang, Yicheng and Yasaei, Rozhin and Chen, Hao and Li, Zhou and Faruque, Mohammad Abdullah Al},
-  journal={IEEE Transactions on Information Forensics and Security}, 
-  title={Stealing Neural Network Structure Through Remote FPGA Side-Channel Analysis}, 
-  year={2021},
-  volume={16},
-  number={},
-  pages={4377-4388},
-  doi={10.1109/TIFS.2021.3106169}}
+@article{DBLP:journals/tifs/ZhangYCLF21,
+  author       = {Yicheng Zhang and
+                  Rozhin Yasaei and
+                  Hao Chen and
+                  Zhou Li and
+                  Mohammad Abdullah Al Faruque},
+  title        = {Stealing Neural Network Structure Through Remote {FPGA} Side-Channel
+                  Analysis},
+  journal      = {{IEEE} Trans. Inf. Forensics Secur.},
+  volume       = {16},
+  pages        = {4377--4388},
+  year         = {2021},
+  url          = {https://doi.org/10.1109/TIFS.2021.3106169},
+  doi          = {10.1109/TIFS.2021.3106169},
+  timestamp    = {Mon, 20 Sep 2021 09:50:40 +0200},
+  biburl       = {https://dblp.org/rec/journals/tifs/ZhangYCLF21.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
