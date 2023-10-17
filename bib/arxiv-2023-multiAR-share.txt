@@ -1,0 +1,6 @@
+@article{slocum2023doesn,
+  title={That Doesn't Go There: Attacks on Shared State in Multi-User Augmented Reality Applications},
+  author={Slocum, Carter and Zhang, Yicheng and Shayegani, Erfan and Zaree, Pedram and Abu-Ghazaleh, Nael and Chen, Jiasi},
+  journal={arXiv preprint arXiv:2308.09146},
+  year={2023}
+}
