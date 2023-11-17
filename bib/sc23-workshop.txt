@@ -1,0 +1,7 @@
+@inproceedings{zhang2023accuracy,
+  title={Accuracy-Constrained Efficiency Optimization and GPU Profiling of CNN Inference for Detecting Drainage Crossing Locations},
+  author={Zhang, Yicheng and Pandey, Dhroov and Wu, Di and Kundu, Turja and Li, Ruopu and Shu, Tong},
+  booktitle={Proceedings of the SC'23 Workshops of The International Conference on High Performance Computing, Network, Storage, and Analysis},
+  pages={1780--1788},
+  year={2023}
+}
