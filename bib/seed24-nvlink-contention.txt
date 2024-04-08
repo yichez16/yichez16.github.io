@@ -1,0 +1,8 @@
+@misc{zhang2024bridge,
+      title={Beyond the Bridge: Contention-Based Covert and Side Channel Attacks on Multi-GPU Interconnect}, 
+      author={Yicheng Zhang and Ravan Nazaraliyev and Sankha Baran Dutta and Nael Abu-Ghazaleh and Andres Marquez and Kevin Barker},
+      year={2024},
+      eprint={2404.03877},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR}
+}
