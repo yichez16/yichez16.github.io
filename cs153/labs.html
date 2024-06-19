@@ -1,0 +1,283 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Xv6</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+  
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">UCR CS153 Winter 2018</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Xv6</li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="xv6">
+<h1>Xv6<a class="headerlink" href="#xv6" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Xv6 is an instructional OS consisting of a stripped down version of unix.
+To get ready to work within xv6,
+please start reading the <a class="reference external" href="https://pdos.csail.mit.edu/6.828/2016/xv6/book-rev9.pdf">xv6 book</a>
+as well as the other xv6 resources listed below.</p>
+</div>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://pdos.csail.mit.edu/6.828/2017/xv6/book-rev10.pdf">xv6 book</a></li>
+<li><a class="reference external" href="https://pdos.csail.mit.edu/6.828/2017/xv6/xv6-rev10.pdf">xv6 indexed/cross referenced code</a> (all 9299 lines of it :-)</li>
+<li><a class="reference external" href="https://pdos.csail.mit.edu/6.828/2017/xv6.html">Official website</a></li>
+</ul>
+</div>
+<div class="section" id="getting-started-sledge">
+<h2>Getting Started (sledge)<a class="headerlink" href="#getting-started-sledge" title="Permalink to this headline">¶</a></h2>
+<p>In sledge, most software is pre-installed, so you only need to download xv6.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="o">[</span>sledge<span class="o">]</span> $ <span class="nb">cd</span> ~
+<span class="o">[</span>sledge<span class="o">]</span> $ git clone https://github.com/mit-pdos/xv6-public.git xv6
+...
+<span class="o">[</span>sledge<span class="o">]</span> $ <span class="nb">cd</span> xv6
+<span class="o">[</span>sledge<span class="o">]</span> $ make
+<span class="o">[</span>sledge<span class="o">]</span> $ <span class="nb">echo</span> <span class="s2">&quot;add-auto-load-safe-path </span><span class="nv">$HOME</span><span class="s2">/xv6/.gdbinit&quot;</span> &gt; ~/.gdbinit
+</pre></div>
+</div>
+</div>
+
+<div class="section" id="getting-started-vm">
+<h2>Getting Started (VM) working on your own machine<a class="headerlink" href="#getting-started-vm" title="Permalink to this headline">¶</a></h2>
+<p>Get familiar with <a class="reference external" href="https://pdos.csail.mit.edu/6.828/2017/tools.html">development environment</a>.
+You can use course machine (sledge) or setup your own VM as follows.</p>
+<ol class="arabic simple">
+<li>Download and install Virtualbox/Vagrant/SSH client</li>
+</ol>
+<ul class="simple">
+<li>Download and install the latest version of virtualbox at <a class="reference external" href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a></li>
+<li>Download and install the latest version of vagrant at <a class="reference external" href="http://www.vagrantup.com/downloads.html">http://www.vagrantup.com/downloads.html</a></li>
+<li>Windows: SSH client <a class="reference external" href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY</a> or <a class="reference external" href="https://cygwin.com/install.html">Cygwin</a>.</li>
+</ul>
+<p>Note: Ubuntu users may want to use the following commands
+to install Virtualbox and Vagrant</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="o">[</span>host<span class="o">]</span> $ sudo apt-get install virtualbox
+<span class="o">[</span>host<span class="o">]</span> $ sudo apt-get install vagrant
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>Add guest OS and run the VM</li>
+</ol>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># download a 64-bit VM</span>
+<span class="o">[</span>host<span class="o">]</span> $ vagrant box add ubuntu/xenial64
+<span class="o">==</span>&gt; box: Loading metadata <span class="k">for</span> box <span class="s1">&#39;ubuntu/xenial64&#39;</span>
+    box: URL: https://atlas.hashicorp.com/ubuntu/xenial64
+<span class="o">==</span>&gt; box: Adding box <span class="s1">&#39;ubuntu/xenial64&#39;</span> <span class="o">(</span>v20170331.0.0<span class="o">)</span> <span class="k">for</span> provider: virtualbox
+    box: Downloading: https://atlas.hashicorp.com/ubuntu/boxes/xenial64/versions/20170331.0.0/providers/virtualbox.box
+<span class="o">==</span>&gt; box: Successfully added box <span class="s1">&#39;ubuntu/xenial64&#39;</span> <span class="o">(</span>v20170331.0.0<span class="o">)</span> <span class="k">for</span> <span class="s1">&#39;virtualbox&#39;</span>!
+
+<span class="c1"># move to your working directory</span>
+<span class="o">[</span>host<span class="o">]</span> $ mkdir cs153
+<span class="o">[</span>host<span class="o">]</span> $ <span class="nb">cd</span> cs153
+
+<span class="c1"># initialize the VM</span>
+<span class="o">[</span>host<span class="o">]</span> $ vagrant init ubuntu/xenial64
+A <span class="sb">`</span>Vagrantfile<span class="sb">`</span> has been placed in this directory. You are now
+ready to <span class="sb">`</span>vagrant up<span class="sb">`</span> your first virtual environment! Please <span class="nb">read</span>
+the comments in the Vagrantfile as well as documentation on
+<span class="sb">`</span>vagrantup.com<span class="sb">`</span> <span class="k">for</span> more information on using Vagrant.
+
+<span class="c1"># launch!</span>
+<span class="o">[</span>host<span class="o">]</span> $ vagrant up
+Bringing machine <span class="s1">&#39;default&#39;</span> up with <span class="s1">&#39;virtualbox&#39;</span> provider...
+<span class="o">==</span>&gt; default: Importing base box <span class="s1">&#39;ubuntu/xenial64&#39;</span>...
+...
+
+<span class="o">[</span>host<span class="o">]</span> $ vagrant ssh
+Welcome to Ubuntu <span class="m">16</span>.04.2 LTS <span class="o">(</span>GNU/Linux <span class="m">4</span>.4.0-71-generic x86_64<span class="o">)</span>
+...
+ubuntu@ubuntu-xenial:~$
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li>Once you have the VM up and running, let&#8217;s initialize your VM
+for this course:</li>
+</ol>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># in the VM, install toolchain</span>
+<span class="o">[</span>vm<span class="o">]</span> $ sudo apt-get update
+<span class="o">[</span>vm<span class="o">]</span> $ sudo apt-get install -y build-essential gdb git gcc-multilib
+
+<span class="c1"># install the patched QEMU</span>
+<span class="c1">#</span>
+<span class="o">[</span>vm<span class="o">]</span> $ <span class="nb">cd</span> ~
+<span class="o">[</span>vm<span class="o">]</span> $ git clone http://web.mit.edu/ccutler/www/qemu.git -b <span class="m">6</span>.828-2.3.0
+<span class="o">[</span>vm<span class="o">]</span> $ sudo apt-get install -y libsdl1.2-dev libtool-bin libglib2.0-dev libz-dev libpixman-1-dev
+<span class="o">[</span>vm<span class="o">]</span> $ <span class="nb">cd</span> qemu
+<span class="o">[</span>vm<span class="o">]</span> $ ./configure --disable-kvm --target-list<span class="o">=</span><span class="s2">&quot;i386-softmmu x86_64-softmmu&quot;</span>
+<span class="o">[</span>vm<span class="o">]</span> $ make
+<span class="o">[</span>vm<span class="o">]</span> $ sudo make install
+
+<span class="c1"># finally it&#39;s time for setting up xv6</span>
+<span class="c1">#</span>
+<span class="o">[</span>vm<span class="o">]</span> $ <span class="nb">cd</span> ~
+<span class="o">[</span>vm<span class="o">]</span> $ git clone https://github.com/mit-pdos/xv6-public.git xv6
+...
+<span class="o">[</span>vm<span class="o">]</span> $ <span class="nb">cd</span> xv6
+<span class="o">[</span>vm<span class="o">]</span> $ make
+
+<span class="c1"># NOTE: allow local gdbinit to be loaded (only done once)</span>
+<span class="c1">#</span>
+<span class="o">[</span>vm<span class="o">]</span> $ <span class="nb">echo</span> <span class="s2">&quot;add-auto-load-safe-path </span><span class="nv">$HOME</span><span class="s2">/xv6/.gdbinit&quot;</span> &gt; ~/.gdbinit
+</pre></div>
+</div>
+<div class="section" id="debugging">
+<h2>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h2>
+<p>Open two terminal windows (and enter the VM if not on sledge).
+Alternatively, you can also try <a class="reference external" href="https://www.gnu.org/software/screen/manual/screen.html">screen</a>
+(<a class="reference external" href="http://aperiodic.net/screen/quick_reference">shortcut</a>) or
+<a class="reference external" href="http://byobu.co/">byobu</a> (not on sledge).</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># in window one</span>
+<span class="o">[</span>vm<span class="p">|</span>sledge<span class="o">]</span> $ <span class="nb">cd</span> ~/xv6
+<span class="o">[</span>vm<span class="p">|</span>sledge<span class="o">]</span> $ make qemu-nox-gdb
+
+<span class="c1"># this starts up QEMU, but QEMU stops just before the processor</span>
+<span class="c1"># executes the first instruction and waits for a debugging</span>
+<span class="c1"># connection from GDB.</span>
+
+<span class="c1"># in window two</span>
+<span class="c1">#</span>
+<span class="c1"># NOTE: -q removes the annoying init message</span>
+<span class="c1">#</span>
+<span class="o">[</span>vm<span class="p">|</span>sledge<span class="o">]</span> $ <span class="nb">cd</span> xv6
+<span class="o">[</span>vm<span class="p">|</span>sledge<span class="o">]</span> $ gdb -q
++ target remote localhost:26000
+warning: A handler <span class="k">for</span> the OS ABI <span class="s2">&quot;GNU/Linux&quot;</span> is not built into this configuration
+of GDB.  Attempting to <span class="k">continue</span> with the default i8086 settings.
+
+The target architecture is assumed to be i8086
+<span class="o">[</span>f000:fff0<span class="o">]</span>    0xffff0:     ljmp   <span class="nv">$0</span>xf000,<span class="nv">$0</span>xe05b
+0x0000fff0 in ?? <span class="o">()</span>
++ symbol-file kernel
+
+<span class="c1"># to terminate, for now, in window 2</span>
+<span class="o">[</span>vm<span class="o">]</span> $ killall qemu-system-i386
+
+<span class="c1"># for sledge</span>
+<span class="o">[</span>sledge<span class="o">]</span> <span class="nb">kill</span> <span class="k">$(</span>pgrep qemu<span class="k">)</span>
+</pre></div>
+</div>
+
+</div>
+
+</div>
+<p>Read more on <a class="reference external" href="https://pdos.csail.mit.edu/6.828/2016/labguide.html">how to use gdb with QEMU/JOS</a>.</p>
+</div>
+<div class="section" id="labs">
+<h2>Labs<a class="headerlink" href="#labs" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      Last updated on Jan 8, 2018.  Based on Page by Chengyu Song.
+    </p>
+  </div>
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+<script src="_static/custom.js"></script>
+
+</body>
+</html>
