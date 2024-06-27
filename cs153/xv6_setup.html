@@ -36,24 +36,10 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">UCR CS153 Winter 2018</a>
-      </nav>
 
 
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>Xv6</li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main">
+
+
             
   <div class="section" id="xv6">
 <h1>Xv6<a class="headerlink" href="#xv6" title="Permalink to this headline">¶</a></h1>
@@ -72,15 +58,15 @@ as well as the other xv6 resources listed below.</p>
 <li><a class="reference external" href="https://pdos.csail.mit.edu/6.828/2017/xv6.html">Official website</a></li>
 </ul>
 </div>
-<div class="section" id="getting-started-sledge">
-<h2>Getting Started (sledge)<a class="headerlink" href="#getting-started-sledge" title="Permalink to this headline">¶</a></h2>
-<p>In sledge, most software is pre-installed, so you only need to download xv6.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="o">[</span>sledge<span class="o">]</span> $ <span class="nb">cd</span> ~
-<span class="o">[</span>sledge<span class="o">]</span> $ git clone https://github.com/mit-pdos/xv6-public.git xv6
+<div class="section" id="getting-started-cs153-01">
+<h2>Getting Started (cs153-01.cs.ucr.edu server)<a class="headerlink" href="#getting-started-cs153-01" title="Permalink to this headline">¶</a></h2>
+<p>In cs153-01, most software is pre-installed, so you only need to download xv6.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="o">[</span>cs153-01<span class="o">]</span> $ <span class="nb">cd</span> ~
+<span class="o">[</span>cs153-01<span class="o">]</span> $ git clone https://github.com/mit-pdos/xv6-public.git xv6
 ...
-<span class="o">[</span>sledge<span class="o">]</span> $ <span class="nb">cd</span> xv6
-<span class="o">[</span>sledge<span class="o">]</span> $ make
-<span class="o">[</span>sledge<span class="o">]</span> $ <span class="nb">echo</span> <span class="s2">&quot;add-auto-load-safe-path </span><span class="nv">$HOME</span><span class="s2">/xv6/.gdbinit&quot;</span> &gt; ~/.gdbinit
+<span class="o">[</span>cs153-01<span class="o">]</span> $ <span class="nb">cd</span> xv6
+<span class="o">[</span>cs153-01<span class="o">]</span> $ make
+<span class="o">[</span>cs153-01<span class="o">]</span> $ <span class="nb">echo</span> <span class="s2">&quot;add-auto-load-safe-path </span><span class="nv">$HOME</span><span class="s2">/xv6/.gdbinit&quot;</span> &gt; ~/.gdbinit
 </pre></div>
 </div>
 </div>
@@ -88,7 +74,7 @@ as well as the other xv6 resources listed below.</p>
 <div class="section" id="getting-started-vm">
 <h2>Getting Started (VM) working on your own machine<a class="headerlink" href="#getting-started-vm" title="Permalink to this headline">¶</a></h2>
 <p>Get familiar with <a class="reference external" href="https://pdos.csail.mit.edu/6.828/2017/tools.html">development environment</a>.
-You can use course machine (sledge) or setup your own VM as follows.</p>
+You can use course machine (cs153-01) or setup your own VM as follows.</p>
 <ol class="arabic simple">
 <li>Download and install Virtualbox/Vagrant/SSH client</li>
 </ol>
@@ -170,13 +156,13 @@ for this course:</li>
 </div>
 <div class="section" id="debugging">
 <h2>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h2>
-<p>Open two terminal windows (and enter the VM if not on sledge).
+<p>Open two terminal windows (and enter the VM if not on cs153-01).
 Alternatively, you can also try <a class="reference external" href="https://www.gnu.org/software/screen/manual/screen.html">screen</a>
 (<a class="reference external" href="http://aperiodic.net/screen/quick_reference">shortcut</a>) or
-<a class="reference external" href="http://byobu.co/">byobu</a> (not on sledge).</p>
+<a class="reference external" href="http://byobu.co/">byobu</a> (not on cs153-01).</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># in window one</span>
-<span class="o">[</span>vm<span class="p">|</span>sledge<span class="o">]</span> $ <span class="nb">cd</span> ~/xv6
-<span class="o">[</span>vm<span class="p">|</span>sledge<span class="o">]</span> $ make qemu-nox-gdb
+<span class="o">[</span>vm<span class="p">|</span>cs153-01<span class="o">]</span> $ <span class="nb">cd</span> ~/xv6
+<span class="o">[</span>vm<span class="p">|</span>cs153-01<span class="o">]</span> $ make qemu-nox-gdb
 
 <span class="c1"># this starts up QEMU, but QEMU stops just before the processor</span>
 <span class="c1"># executes the first instruction and waits for a debugging</span>
@@ -186,8 +172,8 @@ Alternatively, you can also try <a class="reference external" href="https://www.
 <span class="c1">#</span>
 <span class="c1"># NOTE: -q removes the annoying init message</span>
 <span class="c1">#</span>
-<span class="o">[</span>vm<span class="p">|</span>sledge<span class="o">]</span> $ <span class="nb">cd</span> xv6
-<span class="o">[</span>vm<span class="p">|</span>sledge<span class="o">]</span> $ gdb -q
+<span class="o">[</span>vm<span class="p">|</span>cs153-01<span class="o">]</span> $ <span class="nb">cd</span> xv6
+<span class="o">[</span>vm<span class="p">|</span>cs153-01<span class="o">]</span> $ gdb -q
 + target remote localhost:26000
 warning: A handler <span class="k">for</span> the OS ABI <span class="s2">&quot;GNU/Linux&quot;</span> is not built into this configuration
 of GDB.  Attempting to <span class="k">continue</span> with the default i8086 settings.
@@ -200,8 +186,8 @@ The target architecture is assumed to be i8086
 <span class="c1"># to terminate, for now, in window 2</span>
 <span class="o">[</span>vm<span class="o">]</span> $ killall qemu-system-i386
 
-<span class="c1"># for sledge</span>
-<span class="o">[</span>sledge<span class="o">]</span> <span class="nb">kill</span> <span class="k">$(</span>pgrep qemu<span class="k">)</span>
+<span class="c1"># for cs153-01</span>
+<span class="o">[</span>cs153-01<span class="o">]</span> <span class="nb">kill</span> <span class="k">$(</span>pgrep qemu<span class="k">)</span>
 </pre></div>
 </div>
 
@@ -231,7 +217,7 @@ The target architecture is assumed to be i8086
 
   <div role="contentinfo">
     <p>
-      Last updated on Jan 8, 2018.  Based on Page by Chengyu Song.
+      <!-- Last updated on Jan 8, 2018.  Based on Page by Chengyu Song. -->
     </p>
   </div>
 
