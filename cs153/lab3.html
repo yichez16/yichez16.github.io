@@ -1,0 +1,156 @@
+
+<html>
+<head>
+<title>CS153 Lab 3: Shared Memory</title>
+</head>
+<body>
+<center>
+<h1>Lab 3: Advanced Memory management (shared memory)</h1>
+<p>
+<b>Handed out August 13, 2024<br />
+Due August,30 2024 <br />
+</b>
+</center>
+
+
+
+
+<center>
+<font color="#77aacc">
+<h1>Lab 3: </h1>
+</font> 
+</center> 
+
+<h2>Objectives</h2> 
+
+<li>Implement Shared Memory 
+
+
+<h2>Preliminaries</h2>
+
+For this assignment we will use some starter code which is needed for Lab 3 (the same base used for Lab 3). You can get the starter code from the <a href="">lab3 github classroom link</a>. 
+ 
+<!-- <h2>Part 1: Memory translation system call</h2> -->
+
+<!-- <h3>Overview</h3> -->
+
+<!-- The goal of this part is to learn about how the OS manages memory. -->
+
+<!-- <h3>Details</h3> -->
+
+<!-- Add a system call  -->
+
+<!-- <code>int v2p(int virtual, int *physical)</code> -->
+
+<!-- v2p takes a virtual address and returns a physical address.  v2p -->
+<!-- should return an error if the virtual address is not valid (e.g., out -->
+<!-- of range) or not mapped. -->
+
+<h2>Implement shared memory</h2>
+
+<p>In this assignment you are implementing support to enable two
+processes to share a memory page.  This is implemented by having an
+entry in both process page tables point to the same physical page.
+
+<p>Start by looking at the user program shm_cnt.c in the repo.  In
+this program we fork a process, then both processes open a shared
+memory segment with the same id using:
+
+<p><tt>shm_open(1,(char **)(&counter));</tt>
+
+<p>For this system call, the first parameter gives an id for the shared
+memory segment, and the pointer is used to return a pointer to the
+shared page.  By having this pointer be of type <tt>shm_cnt</tt>, we
+can access this struct off of this pointer and we would be accessing
+the shared memory page.
+
+<p>The code then proceeds to have both processes go through a loop
+repeatedly incrementing the counter in the shared page (acquiring a
+user level spin lock to make sure we dont lose updates; test your
+program without the lock and see if it makes a difference).  The
+uspinlock is implemented in the starter code in uspinlock.c and
+uspinlock.h -- take a look.
+
+<p>At the end, each process prints the value of the counter, closes the
+shared memory segment and exits using <tt>shm_close(1)</tt>.  One of
+them should have a value of 20000 reflecting updates from both the
+processes.  Check your code without the spinlock to see if you lose updates.
+
+
+<p>Your task is to implement shm_open and shm_close.  They are already
+added as system calls; you should write your code in shm.c
+
+<p>shm_open looks through the shm_table to see if this segment id already
+exists.  If it doesn't then it needs to allocate a page and map it,
+and store this information in the shm_table.  Dont forget to grab the
+lock while you are working with the shm_table (why?).  If the segment
+already exists, increase the refence count, and use mappages to add
+the mapping between the virtual address and the physical address.  In
+either case, return the virtual address through the second parameter
+of the system call.
+
+<p>shm_close is simpler: it looks for the shared memory segment in
+shm_table.  If it finds it it decrements the reference count.  If it
+reaches zero, then it clears the shm_table.  You do not need to free
+up the page since it is still mapped in the page table.  Ok to leave
+it that way.
+
+<h2>Bonus: mmap</h2>
+
+<p>Implement two system calls 
+<p><tt>void *mmap(void *addr, size_t length)</tt> and
+<p><tt>int munmap(void *addr, size_t length)</tt>
+<p> mmap is an alternative to malloc where you also tell the operating
+system where to place the allocated page(s) in virtual memory space.
+To implement this correctly, you should first confirm that the virtual
+address/pages are available (otherwise error) and then allocate the
+physical page and add the mapping to the page directory.  Specifically:
+<p>
+On success, <tt>mmap()</tt> returns a pointer to the mapped area.  On
+       error, the value <tt>MAP_FAILED</tt> (that is, <tt>(void *) -1</tt>) is returned,
+       and errno is set to indicate the error.
+
+<p> unmap does the opposite and frees the memory and remove the mapping from the page table.
+
+<p>If you are really adventureous, you can implement the file memory mapping part of mmap (see for example <a href="https://man7.org/linux/man-pages/man2/mmap.2.html">mmap man page</a>).  Talk to me if you decide to do this.
+<h2>Hints</h2> 
+
+<p><b> IMPORTANT </b>: Check out the <a href="lab3-survival.txt">Lab 3 survival guide</a> for more detailed help.
+
+
+<h2>Alternative more challenging project (not for the faint of heart)</h2>
+
+<p>This project is intended as an alternative to the shared memory
+project, only if you want a harder challenge.  We will not suppor this
+project, primarily because we have not implemented it ourselves.
+
+<p>Implement copy-on-write.  If you are interested in implementing CoW,
+please talk to me for more instructions although I have not
+implemented it myself so I may not be able to provide something
+similar to the survival guide.  I am willing to give a 20\% bonus if
+you implement this successfully.
+
+<p>The tasks primarily will include modifying fork to avoid duplicating
+the memory pages but rather just map the same pages of the original
+process to both.  You have to figure out where the return value to
+fork is placed (typically in register eax, but check), and if in
+memory treat that page differently.  You also have to change the page
+table entries for all the user level pages to be read only on both the
+parent and the child.
+
+<p>The second part of the implementation is to add handler in trap.c when
+there is a page fault and the cause is a write to a read only page.
+In that case, you have to check if the mapping is the same between the
+parent and the child, create a duplicate page, and update the page
+table for the writing process to point to the new page.  Both page
+table entries should be set to read/write.
+
+<p>The problem gets super complicated if there are multiple forks.  Dont
+worry about that -- get it working with two processes.
+
+
+
+
+
+
+</body></html>
