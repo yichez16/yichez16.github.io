@@ -1,0 +1,9 @@
+@misc{gu2024iknowsynccovert,
+      title={I Know What You Sync: Covert and Side Channel Attacks on File Systems via syncfs}, 
+      author={Cheng Gu and Yicheng Zhang and Nael Abu-Ghazaleh},
+      year={2024},
+      eprint={2411.10883},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR},
+      url={https://arxiv.org/abs/2411.10883}, 
+}
